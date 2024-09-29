@@ -1,0 +1,28 @@
+@baseurl = https://api.cognitive.microsofttranslator.com
+@api-key = eda8a3b7002a4ab2bf49c31b0ba199ed
+@region = eastus
+
+
+### Translate Text
+POST {{baseurl}}/translate?api-version=3.0&to=zh-Hans&to=es&to=ja
+Ocp-Apim-Subscription-Key: {{api-key}}
+Ocp-Apim-Subscription-Region: {{region}}
+Content-Type: application/json
+
+[
+  {
+    "Text": "Hello, what is your name?"
+  }
+]
+
+### Translite Text
+POST {{baseurl}}/translate?api-version=3.0&to=zh-Hans&toScript=Latn
+Ocp-Apim-Subscription-Key: {{api-key}}
+Ocp-Apim-Subscription-Region: {{region}}
+Content-Type: application/json
+
+[
+  {
+    "Text": "こんにちは"
+  }
+]
