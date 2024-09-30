@@ -144,13 +144,57 @@ Valid for 6 months
 
 [What is intent recognition?](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/intent-recognition)
 
-<!--
-## Whiteboard
-### Whiteboard
+## Mind Map
+```markmap
+# Azure AI Service
+
+## Language Service
+
+### Analyze Text
+- [Language Detection](https://learn.microsoft.com/en-us/azure/ai-services/language-service/language-detection/overview)
+- [Key Phrase Extraction](https://learn.microsoft.com/en-us/azure/ai-services/language-service/key-phrase-extraction/overview)
+- [Sentiment Analysis and Opinion Mining](https://learn.microsoft.com/en-us/azure/ai-services/language-service/sentiment-opinion-mining/overview?tabs=prebuilt)
+- [Named Entity Recognition](https://learn.microsoft.com/en-us/azure/ai-services/language-service/named-entity-recognition/overview)
+- [Entity Linking](https://learn.microsoft.com/en-us/azure/ai-services/language-service/entity-linking/overview)
+- [Summarization](https://learn.microsoft.com/en-us/azure/ai-services/language-service/summarization/overview?tabs=text-summarization)
+- [PII detection](https://learn.microsoft.com/en-us/azure/ai-services/language-service/personally-identifiable-information/overview)
+
+### Question Answering
+- [Custom Question Answering](https://learn.microsoft.com/en-us/azure/ai-services/language-service/question-answering/overview)
 
 
-### OneNotes
--->
+### Language Understanding
+- [Conversational language understanding](https://learn.microsoft.com/en-us/azure/ai-services/language-service/conversational-language-understanding/overview)
+
+## Translator Service
+### Text Translation
+- [Detect](https://learn.microsoft.com/en-us/azure/ai-services/translator/reference/v3-0-detect)
+- [Translate](https://learn.microsoft.com/en-us/azure/ai-services/translator/reference/v3-0-translate#translate-to-multiple-languages)
+- [Transliterate](https://learn.microsoft.com/en-us/azure/ai-services/translator/reference/v3-0-transliterate)
+- [Dictionary lookup](https://learn.microsoft.com/en-us/azure/ai-services/translator/reference/v3-0-transliterate)
+
+### Document Translation
+- [Asynchronous batch translation](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/overview#asynchronous-batch-translation)
+- [Synchronous single file](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/overview#synchronous-translation)
+
+### Custom Translator
+- [What is Custom Translator?](https://learn.microsoft.com/en-us/azure/ai-services/translator/custom-translator/overview)
+
+## Speech Service
+- Speech to text
+    - Speech to text
+    - Real-time speech to text
+    - Fast transcription API
+    - Batch transcription
+- Text to speech
+    - [Speech Synthesis Markup Language (SSML)](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup)
+- Speech translation
+- Language identification
+- Speaker recognition
+- Pronunciation assessment
+- Intent recognition
+
+```
 
 ## Credentials
 [AI-3003: Build a natural language processing solution with Azure AI Language](https://learn.microsoft.com/en-us/training/paths/develop-language-solutions-azure-ai/)

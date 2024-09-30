@@ -1,0 +1,27 @@
+
+
+POST https://eastus.api.cognitive.microsoft.com/language/:query-knowledgebases?projectName=demo0930-qa&api-version=2021-10-01&deploymentName=production HTTP/1.1
+Ocp-Apim-Subscription-Key: ac6b23543d0c4827af4fe21f57ba0f74
+Content-Type: application/json
+
+{
+    "top": 3,
+    "question": "我要怎麽付钱",
+    "includeUnstructuredSources": true,
+    "answerSpanRequest": {
+        "enable": true,
+        "topAnswersWithSpan": 1,
+        "confidenceScoreThreshold": "YOUR_SCORE_THRESHOLD_HERE"
+    },
+    "filters": {
+        "metadataFilter": {
+            "logicalOperation": "YOUR_LOGICAL_OPERATION_HERE",
+            "metadata": [
+                {
+                    "key": "YOUR_ADDITIONAL_PROP_KEY_HERE",
+                    "value": "YOUR_ADDITIONAL_PROP_VALUE_HERE"
+                }
+            ]
+        }
+    }
+}
