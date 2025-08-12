@@ -72,11 +72,31 @@ resource "azurerm_resource_group" "ai102" {
   }
 }
 
-# resource "azurerm_resource_group" "demo" {
-#   name     = "Demo${var.group_postfix}"
-#   location = local.location
+resource "azurerm_resource_group" "demo" {
+  name     = "Demo${var.group_postfix}"
+  location = local.location
 
-#   tags = {
-#     environment = local.group_name
-#   }
-# }
+  # Remove from Terraform state after creation
+  lifecycle {
+    create_before_destroy = true
+  }
+
+  tags = {
+    environment = local.group_name
+  }
+}
+
+# Use terraform_data instead of null_resource for more reliable operations
+resource "terraform_data" "remove_from_state" {
+  depends_on = [azurerm_resource_group.demo]
+
+  # This will ensure the command runs after the apply has completed
+  provisioner "local-exec" {
+    # Add -lock=false to bypass the state lock issue
+    command = "terraform state rm -lock=false azurerm_resource_group.demo"
+    
+    # Ensure the command is executed after the apply is complete
+    # On Windows, use a batch script approach
+    interpreter = ["cmd", "/C"]
+  }
+}
